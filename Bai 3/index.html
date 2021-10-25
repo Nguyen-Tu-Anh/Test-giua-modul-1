@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let years = +prompt('Moi nhap nam sinh');
+    tinhTuoi();
+
+    function tinhTuoi() {
+        let today = new Date();
+        let year = today.getFullYear();
+        let age = year - years;
+        if (age < 0) {
+            document.write('Khong hop le')
+        } else {
+            document.write(age)
+        }
+
+    }
+</script>
+</body>
+</html>

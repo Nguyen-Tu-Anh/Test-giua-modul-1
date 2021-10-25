@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label><b>Enter a number:</b><input type="text" id="number"></label>
+<button onclick="checkSNT()">Show</button>
+<h3 id="result"></h3>
+<script>
+    function checkSNT() {
+        let arr = [];
+        let numbers = +document.getElementById('number').value;
+        for (let i = 0; i <= numbers; i++) {
+            if (i < 2) {
+                continue
+            } else {
+                let check = true;
+                for (let j = 2; j <= Math.sqrt(i); j++) {
+                    if (i % j === 0) {
+                        check = false;
+                        break;
+                    }
+                }
+                if (check) {
+                    arr.push(i)
+                    document.getElementById('result').innerHTML = arr;
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
